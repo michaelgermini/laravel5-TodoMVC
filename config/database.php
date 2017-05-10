@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,8 +66,8 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-
-        'heroku' => [  
+        
+         'heroku' => [  
             'driver'   => 'pgsql',
             'host'     => parse_url(getenv("DATABASE_URL"))["host"],
             'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
@@ -77,6 +77,7 @@ return [
             'prefix'   => '',
             'schema'   => 'public',
         ],
+
     ],
 
     /*
